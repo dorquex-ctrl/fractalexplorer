@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fractal Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="fractal-canvas"></canvas>
+
+    <div id="controls">
+        <div class="control-group">
+            <button id="btn-mode" title="Switch fractal type">Mandelbrot</button>
+            <button id="btn-julia-pick" title="Pick Julia constant from Mandelbrot">Pick Julia c</button>
+        </div>
+        <div class="control-group">
+            <label>Iterations: <span id="iter-value">256</span></label>
+            <input type="range" id="slider-iter" min="64" max="2048" step="64" value="256">
+            <button id="btn-auto-iter" class="active" title="Auto-scale iterations with zoom depth">Auto</button>
+        </div>
+        <div class="control-group">
+            <label>Zoom Speed:</label>
+            <input type="range" id="slider-zoom-speed" min="1" max="10" step="1" value="3" title="1 = precise, 10 = fast">
+        </div>
+        <div class="control-group">
+            <button id="btn-color" title="Cycle color palette">Palette: Classic</button>
+        </div>
+        <div class="control-group">
+            <button id="btn-reset" title="Reset view">Reset</button>
+        </div>
+    </div>
+
+    <div id="info">
+        <span id="info-coords">Center: -0.5000 + 0.0000i</span>
+        <span id="info-zoom">Zoom: 1.0x</span>
+        <span id="info-precision">SP</span>
+        <span id="info-julia" hidden>Julia c: -0.7000 + 0.2702i</span>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

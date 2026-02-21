@@ -1,0 +1,12 @@
+{
+    "buildCommand": "",
+    "outputDirectory": ".",
+    "headers": [
+        {
+            "source": "/shaders/(.*)",
+            "headers": [
+                { "key": "Content-Type", "value": "text/plain" }
+            ]
+        }
+    ]
+}

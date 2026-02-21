@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: #000;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: #fff;
+}
+
+#fractal-canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    cursor: crosshair;
+}
+
+body.picking #fractal-canvas {
+    cursor: pointer;
+}
+
+#controls {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    z-index: 10;
+    user-select: none;
+}
+
+#controls button {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.15s;
+}
+
+#controls button:hover {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+#controls button.active {
+    background: rgba(80, 140, 255, 0.4);
+    border-color: rgba(80, 140, 255, 0.7);
+}
+
+#controls input[type="range"] {
+    width: 140px;
+    accent-color: #5080ff;
+}
+
+#controls label {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#info {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 8px 16px;
+    font-size: 12px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    display: flex;
+    gap: 24px;
+    z-index: 10;
+    color: rgba(255, 255, 255, 0.75);
+}
